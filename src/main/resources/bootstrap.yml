@@ -1,0 +1,14 @@
+
+spring:
+  cloud:
+    nacos:
+      config:
+        ext-config[0]:
+          data-id: ext-config-common1.properties
+          group: REFRESH_GRUOP
+          #refresh: true
+          #扩展的方式二，优先级低，配置项中有相同的key时，值获取到的是其他的获取方式的值，这个只能取到默认分组的值，其他分组的值无法获取
+        shared-dataids: ext-config-common1.properties,ext-config-common2.properties
+        refreshable-dataids: ext-config-common1.properties,ext-config-common2.properties
+
+
